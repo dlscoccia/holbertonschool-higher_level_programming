@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-i = 97
-while chr(i) <= 'z':
-    print(chr(i), end="")
-    i = i + 1
+i = 0
+while i < 26:
+    print("{:c}".format(i + 97), end="")
+    i += 1
