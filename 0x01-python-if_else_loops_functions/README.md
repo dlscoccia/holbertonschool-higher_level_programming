@@ -1,4 +1,4 @@
-## • Why indentation is so important in Python ::snake::
+## • Why indentation is so important in Python :snake:
 
 Indentation refers to the spaces at the beginning of a code line.
 Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important.
