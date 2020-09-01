@@ -13,4 +13,4 @@ elif number < 0 and mod_neg != 0:
 elif mod_n > 0 and mod_n < 6:
     print("{:s} {:d} is {:d} {:s}".format(str, number, mod_n, less))
 elif mod_n > 5:
-    print("{:s} {:d} is {:d} and is greater that 5".format(str, number, mod_n))
+    print("{:s} {:d} is {:d} and is greater than 5".format(str, number, mod_n))
