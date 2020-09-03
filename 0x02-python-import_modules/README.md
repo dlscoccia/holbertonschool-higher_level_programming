@@ -42,7 +42,11 @@ function_name(arguments)
 from myfunctions import plustwo
 plustwo(3)
 ```
-
+> To import a variable from another file:
+> ``` bash
+> import filename.py
+> print(filename.variable_name)
+```
 ### :speech_balloon: How to create a module
 
 Python has a way to put definitions in a file and use them in a script or in an interactive instance of the interpreter.
@@ -51,9 +55,9 @@ Such a file is called a module; definitions from a module can be imported into o
 
 ### :speech_balloon: How to use the built-in function dir()
 
-The dir() function returns all properties and methods of the specified object, without the values.
+1.- The dir() function returns all properties and methods of the specified object, without the values.
 This function will return all the properties and methods, even built-in properties which are default for all object.
-
+2.- The built-in function dir() is used to find out which names a module defines. It returns a sorted list of strings
 ``` bash
 dir(object)
 ```
@@ -110,5 +114,8 @@ You don’t see an argc variable like in the C code example. It doesn’t exist 
 Also, note that enumerate(), when applied to an iterable, returns an enumerate object that can emit pairs associating the index of an element in sys.arg to its corresponding value. This allows looping through the content of sys.argv without having to maintain a counter for the index in the list.
 
 _____________________________________________________________________
-Further information: [Real Pyhton]( https://realpython.com/python-command-line-arguments/#the-command-line-interface) -
-[w3School]( https://www.w3schools.com/python/python_ref_functions.asp)
+Glosary:
+1.- __import__: Imports a module.
+``` bash
+__import__(name, globals=None, locals=None, fromlist=(), level=0)
+```
