@@ -2,15 +2,13 @@
 
 
 def main():
-    # You are not allowed to use * for importing or __import__
     from calculator_1 import add, sub, mul, div
-    # a and b must be defined in 2 different lines: a = 10 and another b = 5
     a = 10
     b = 5
     print("{} + {} = {}".format(a, b, add(a, b)))
     print("{} - {} = {}".format(a, b, sub(a, b)))
     print("{} * {} = {}".format(a, b, mul(a, b)))
     print("{} / {} = {}".format(a, b, div(a, b)))
-# Your code should not be executed when imported
-if __name__ == "__main__":
+
+if (__name__ == "__main__"):
     main()
