@@ -46,7 +46,7 @@ plustwo(3)
 > ``` bash
 > import filename.py
 > print(filename.variable_name)
-```
+> ```
 ### :speech_balloon: How to create a module
 
 Python has a way to put definitions in a file and use them in a script or in an interactive instance of the interpreter.
