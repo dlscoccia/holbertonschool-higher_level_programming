@@ -119,3 +119,20 @@ Glosary:
 ``` bash
 __import__(name, globals=None, locals=None, fromlist=(), level=0)
 ```
+2.- import string:
+``` bash
+import string
+print("Alphabet from a-z:")
+for letter in string.ascii_lowercase:
+   print(letter, end =" ")
+print("\nAlphabet from A-Z:")
+for letter in string.ascii_uppercase:
+   print(letter, end =" ")
+```
+> Sample Output:
+``` bash
+Alphabet from a-z:
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+Alphabet from A-Z:
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+```
