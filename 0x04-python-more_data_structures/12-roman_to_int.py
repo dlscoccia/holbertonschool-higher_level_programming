@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if (roman_string is None):
-        return (0)
+    if type(roman_string) is not str or len(roman_string) is 0:
+        return 0
     I = 1
     V = 5
     X = 10
