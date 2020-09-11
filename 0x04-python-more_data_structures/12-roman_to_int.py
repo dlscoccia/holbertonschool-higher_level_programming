@@ -1,28 +1,17 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if type(roman_string) is not str or len(roman_string) is 0:
+
+    my_dicc = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    num = 0
+
+    if roman_string is None or type(roman_string) is not str:
         return 0
-    I = 1
-    V = 5
-    X = 10
-    L = 50
-    C = 100
-    D = 500
-    M = 1000
-    number = 0
-    for i in roman_string:
-        if i == 'I':
-            number += 1
-        elif i == 'V':
-            number += 5
-        elif i == 'X':
-            number += 10
-        elif i == 'L':
-            number += 50
-        elif i == 'C':
-            number += 100
-        elif i == 'D':
-            number += 500
-        elif i == 'M':
-            number += 1000
-    return (number)
+
+    for i in range(len(roman_string)):
+        if i == len(roman_string) - 1:
+            num += my_dicc[roman_string[i]]
+        elif my_dicc[roman_string[i]] >= my_dicc[roman_string[i + 1]]:
+            num += my_dicc[roman_string[i]]
+        else:
+            num -= my_dicc[roman_string[i]]
+    return num
