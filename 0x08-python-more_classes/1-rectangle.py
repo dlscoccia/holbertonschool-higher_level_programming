@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-"""
-Module Rectangle
-"""
+""" Module Rectangle """
 
 
 class Rectangle:
-    """
-    Class Rectangle
-    """
+    """ Class Rectangle """
     def __init__(self, width=0, height=0):
         """
         init
@@ -20,7 +16,7 @@ class Rectangle:
         """
         property
         """
-        return self._width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -38,7 +34,7 @@ class Rectangle:
         """
         property
         """
-        return self._height
+        return self.__height
 
     @height.setter
     def height(self, value):

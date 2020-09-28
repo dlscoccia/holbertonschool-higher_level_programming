@@ -20,7 +20,7 @@ class Rectangle:
         """
         property
         """
-        return self._width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -38,7 +38,7 @@ class Rectangle:
         """
         property
         """
-        return self._height
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -61,6 +61,6 @@ class Rectangle:
         """
         perimeter method
         """
-        if ((self.__height == 0) or (self.__width == 0)):
+        if self.__height == 0 or self.__width == 0:
             return 0
         return ((self.__height * 2) + (self.__width * 2))
