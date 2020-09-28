@@ -1,16 +1,26 @@
 #!/usr/bin/python3
 """
-Class Reactangle
+Module Reactangle
 """
 
 
 class Rectangle:
+    """ Class Rectangle """
     def __init__(self, width=0, height=0):
         """
         init
         """
         self.width = width
         self.height = height
+
+    def __str__(self):
+        """
+        str representation
+        """
+        if self.width == 0 or self.height == 0:
+            return ("")
+        fix = ((("#" * self.width) + "\n") * self.height)[:-1]
+        return fix
 
     @property
     def width(self):
@@ -61,11 +71,3 @@ class Rectangle:
         if ((self.__height == 0) or (self.__width == 0)):
             return 0
         return ((self.__height * 2) + (self.__width * 2))
-
-    def __str__(self):
-        """
-        str representation
-        """
-        if self.width == 0 or self.height == 0:
-            return ""
-        return ((("#" * self.width) + "\n") * self.height)[:-1]
