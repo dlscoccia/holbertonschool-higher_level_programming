@@ -1,4 +1,6 @@
 What is a superclass, baseclass or parentclass
+ A superclass, or parent class, is a class that is being inherited from. A subclass is a class that is inheriting from a superclass.
+ 
 What is a subclass
 How to list all attributes and methods of a class or instance
 When can an instance have new attributes
