@@ -37,6 +37,7 @@ Now the file is ready to go!
 #### How to read the full content of a file
 
 The read() method allows us to read the full content of a file, like this:
+
       ```
       f = open("demofile.txt", "r")
       print(f.read())
