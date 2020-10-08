@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+''' Module doc '''
+
+
 def matrix_divided(matrix, div):
     '''
         divides a matrix value by a divisor
