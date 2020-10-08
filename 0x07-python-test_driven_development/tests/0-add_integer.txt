@@ -32,8 +32,12 @@ Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
->>> add_integer(2, float('inf'))
-inf
+>>> add_integer(2.5, float('inf'))
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
 
->>> add_integer(2, float('nan'))
-nan
+>>> add_integer(2.5, float('nan'))
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
