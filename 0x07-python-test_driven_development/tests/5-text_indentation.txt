@@ -7,15 +7,15 @@ TypeError: text_indentation() missing 1 required positional argument: 'text'
 
 >>> text_indentation("Hola mundo. Que hay de nuevo? estos simbolos parece que funcionan: sera? quien sabe. yo no")
 Hola mundo.
-
+<BLANKLINE>
 Que hay de nuevo?
-
+<BLANKLINE>
 estos simbolos parece que funcionan:
-
+<BLANKLINE>
 sera?
-
+<BLANKLINE>
 quien sabe.
-
+<BLANKLINE>
 yo no
 
 >>> text_indentation("Hola")
@@ -26,17 +26,17 @@ Hola Mundo
 
 >>> text_indentation("Hola.Mundo")
 Hola.
-
+<BLANKLINE>
 Mundo
 
 >>> text_indentation("Hola:Mundo")
 Hola:
-
+<BLANKLINE>
 Mundo
 
 >>> text_indentation("Hola?Mundo")
 Hola?
-
+<BLANKLINE>
 Mundo
 >>> text_indentation(2)
 Traceback (most recent call last):
