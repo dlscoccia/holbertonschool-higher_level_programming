@@ -90,39 +90,6 @@ class Rectangle(Base):
         """
         return self.__width * self.__height
 
-    def display(self):
-        """ print rentangle with # char """
-        if self.__y > 0:
-            print('\n' * self.__y, end="")
-        for i in range(self.__height):
-            print(' ' * self.__x + '#' * self.__width)
-
-    def update(self, *args, **kwargs):
-        """ Method for assig argv to var class """
-        ln = len(args)
-        if not args:
-            if kwargs.get('id') is not None:
-                self.id = kwargs.get('id')
-            if kwargs.get('width') is not None:
-                self.width = kwargs.get('width')
-            if kwargs.get('height') is not None:
-                self.height = kwargs.get('height')
-            if kwargs.get('x') is not None:
-                self.x = kwargs.get('x')
-            if kwargs.get('y') is not None:
-                self.y = kwargs.get('y')
-        else:
-            if ln >= 1 and args[0] is not None:
-                self.id = args[0]
-            if ln >= 2 and args[1] is not None:
-                self.width = args[1]
-            if ln >= 3 and args[2] is not None:
-                self.height = args[2]
-            if ln >= 4 and args[3] is not None:
-                self.x = args[3]
-            if ln >= 5 and args[4] is not None:
-                self.y = args[4]
-
     def __str__(self):
         """str method for print string defined
         Returns:
@@ -133,18 +100,3 @@ class Rectangle(Base):
             self.__y, self.__width,
             self.__height
         )
-
-    def to_dictionary(self):
-        """diccionari method
-        Returns:
-            dict: dictionari of values
-        """
-
-        new_dict = {
-            'x': self.x,
-            'y': self.y,
-            'id': self.id,
-            'height': self.height,
-            'width': self.width
-        }
-        return new_dict
