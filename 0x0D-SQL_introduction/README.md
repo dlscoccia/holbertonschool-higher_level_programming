@@ -1,4 +1,4 @@
-![sql](https://deivydas.com/wp-content/uploads/2018/07/1200px-MySQL.svg_-1024x528.png)
+![sql](https://www.laestanciaazul.com/media/post/sql-instalando-mysql-en-linux/mysqlbanner.jpg)
 
 # 0x0D. SQL - Introduction
 ## What is SQL?
