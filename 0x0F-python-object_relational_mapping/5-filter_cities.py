@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-python script that lists all states from the database hbtn_0e_0_usa with
-a given name
+python script that lists all cities from the database hbtn_0e_4_usa
+with specified state name
 """
 
 import MySQLdb
@@ -11,11 +11,10 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                          passwd=argv[2], db=argv[3], charset="utf8")
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE '{:s}' ORDER BY \
-    id ASC".format(argv[4]))
+    cursor.execute("SELECT cities.name FROM cities \
+    JOIN states ON cities.state_id = states.id WHERE states.name LIKE %s \
+    ORDER BY cities.id", (argv[4],))
     rows = cursor.fetchall()
-    for row in rows:
-        if row[1] == argv[4]:
-            print(row)
+    print(", ".join(city[0] for city in rows))
     cursor.close()
     db.close()
