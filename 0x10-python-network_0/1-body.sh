@@ -1,3 +1,3 @@
 #!/bin/bash
-# Script that takes in a URL, sends a GET request to the URL, and displays the body of the response
-curl -sI $1 | grep 'Location' |  cut -d '/' -f 4
+# Sends a GET request to the URL and returns the body of the response only if it has a 200 status code
+curl -sLX GET $1
