@@ -1,3 +1,3 @@
 #!/bin/bash
 # allaword methods
-curl -sI "$1" | cut -d' ' -f2- | grep OPTIONS
+curl -sI "$1" | grep "Allow: " | sed 's/Allow: //'
