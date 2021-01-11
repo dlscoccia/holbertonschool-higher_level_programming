@@ -4,23 +4,21 @@ json with api post resquets
 '''
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     import requests
     from sys import argv
-    url = 'http://0.0.0.0:5000/search_user'
     if len(argv) == 2:
         q = argv[1]
     else:
         q = ""
-    response = requests.post(url, data={'q': q})
-    if response:
-        json_response = response.json()
-        id = json_response.get('id')
-        name = json_response.get('name')
-        if len(json_response) == 0 or not id or not name:
-            print('No result')
+    req = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
+    try:
+        req_json = req.json()
+        id = req_json.get('id')
+        name = req_json.get('name')
+        if len(req_json) == 0 or not id or not name:
+            print("No result")
         else:
-            print('[{}] {}'.format(json_response.get('id'),
-                                   json_response.get('name')))
-    else:
-        print('Not a valid JSON')
+            print("[{}] {}".format(req_json.get('id'), req_json.get('name')))
+    except:
+        print("Not a valid JSON")
