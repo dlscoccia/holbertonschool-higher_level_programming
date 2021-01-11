@@ -18,8 +18,9 @@ if __name__ == "__main__":
         id = json_response.get('id')
         name = json_response.get('name')
         if len(json_response) == 0 or not id or not name:
-            print('No')
+            print('No result')
         else:
-            print('[{}] {}'.format(id, name))
+            print('[{}] {}'.format(json_response.get('id'),
+                                   json_response.get('name')))
     else:
         print('Not a valid JSON')
