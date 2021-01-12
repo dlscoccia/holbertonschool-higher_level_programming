@@ -7,9 +7,10 @@ github api resquest id from user
 if __name__ == "__main__":
     import requests
     from sys import argv
-    r = requests.get('https://api.github.com/user', auth=(argv[1], argv[2]))
-    r = r.json()
+    url = 'https://api.github.com/user'
+    req = requests.get(url, auth=(argv[1], argv[2]))
+    req = req.json()
     try:
-        print(r['id'])
+        print(req['id'])
     except KeyError:
         print("None")
