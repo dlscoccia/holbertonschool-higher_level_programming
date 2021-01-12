@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-commits github api
+commits github api get
 '''
 
 
