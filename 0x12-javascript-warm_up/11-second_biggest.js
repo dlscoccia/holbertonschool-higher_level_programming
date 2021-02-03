@@ -1,8 +1,8 @@
 #!/usr/bin/node
-const myArgs = process.argv;
-if (myArgs.length <= 3) {
-  console.log('0');
-} else {
-  const myArray = myArgs.slice(2).sort();
-  console.log(myArray[myArray.length - 2]);
+let value = 0;
+const args = process.argv.slice(2);
+if (args.length > 1) {
+  args.sort();
+  value = args[args.length - 2];
 }
+console.log(value);
