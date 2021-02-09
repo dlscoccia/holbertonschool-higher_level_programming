@@ -46,7 +46,7 @@ undefined is a property of the global object. That is, it is a variable in globa
 
 A variable that has not been assigned a value is of type undefined. A method or statement also returns undefined if the variable that is being evaluated does not have an assigned value. A function returns undefined if a value was not returned.
 
-Why the variable type and scope is important.
+## Why the variable type and scope is important.
 
 You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.
 
@@ -107,3 +107,6 @@ alert(studObj2.age); // 15
 When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds a link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. By definition, null has no prototype, and acts as the final link in this prototype chain.
 
 Nearly all objects in JavaScript are instances of Object which sits on the top of a prototype chain.
+___
+Source:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript
