@@ -4,7 +4,7 @@
 let counter = 0;
 const id = '/18/';
 const request = require('request');
-const url = 'https://swapi-api.hbtn.io/api/films/'; // process.argv[2];
+const url = process.argv[2]; // process.argv[2];
 request(url, function (error, response, body) {
   if (error) console.error('error:', error);
   const numberFilms = JSON.parse(body).count;
